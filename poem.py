@@ -6,15 +6,48 @@ class Base:
         self.taste = taste
         self.experience = experience
 
+    def begin(self):
         print("I'm 23 and I'm hungry.\n"
               "I could starve, but I'm sat below a fig tree.\n"
               "I should eat some before they rot.\n\n"
               "I picked one.")
 
-        print(f"I tried it, it was {taste}. I saw {experience}")
-        print(f"I picked another one.")
+    def eat_fig(self):
+        print(
+            f"I tried it, it was {self.taste}. I saw myself {self.experience}.")
+
+
+class NextFig(Base):
+    def __init__(self, taste, experience, colour, feeling):
+        super().__init__(taste, colour, experience, feeling)
+        self.colour = colour
+        self.feeling = feeling
+
+    def eat_another(self):
+        print(f"\nI picked another one. It was {self.colour}")
+        self.eat_fig()
+        print(f"I felt {self.feeling}")
+
+
+class FinalFig(NextFig):
+    def __init__(self, taste, experience, colour, feeling, consequence):
+        super().__init__(self, taste, experience, colour, feeling, consequence)
+        self.consequence = consequence
+
+    def eat_another(self):
+        print(f"I picked a final fig. It was {self.colour}\n"
+              f"It tasted {self.taste}."
+              f"I realised {self.consequence}")
 
 
 if __name__ == "__main__":
 
-    f1 = Base("sweet", "dancing on a stage")
+    possibiliites = [
+        NextFig("sweet", "dancing with my closest friends", "purple", "alive"),
+        NextFig("honeyed", "living by the sea", "golden", "free")
+    ]
+
+    for fig in possibiliites:
+        fig.eat_another()
+
+    final_fig = FinalFig("bitter", "doing nothing", "brown", "empty")
