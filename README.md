@@ -37,4 +37,5 @@ I felt hopeful.
 I picked a final fig. It was brown.
 I tried it, it was rotten. I saw myself doing nothing.
 
-I realised I don't like rotten fruit, nor do I have to eat any.
+I realised I don't like rotten figs, nor do I have to eat them.
+There are still figs on the tree.

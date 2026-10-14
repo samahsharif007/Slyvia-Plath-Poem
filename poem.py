@@ -47,6 +47,7 @@ class FinalFig(NextFig):
         print(f"I picked a final fig. It was {self.colour}.")
         super().eat_fig()
         print(f"I realised {self.consequence}")
+        print("There are still figs on the tree.")
 
 
 if __name__ == "__main__":
@@ -65,6 +66,6 @@ if __name__ == "__main__":
         fig.eat_another()
 
     final_fig = FinalFig("rotten", "doing nothing", "brown",
-                         "empty", "I don't like rotten fruit, nor do I have to eat any.")
+                         "empty", "I don't like rotten figs, nor do I have to eat them.")
 
     final_fig.eat_another()
