@@ -2,41 +2,51 @@
 # Positive spin of Slyvia Plaths fig tree
 
 class Base:
+    """Begins the poem and tries the first fig"""
+
     def __init__(self, taste: str, experience: str):
+        """Set up attributes taste and experience"""
         self.taste = taste
         self.experience = experience
 
     def begin(self):
+        """Introduction"""
+        print("\nBad take on Sylvia Plath's Fig Tree: Eat the Damn Fig\n\n")
         print("I'm 23 and I'm hungry.\n"
               "I could starve, but I'm sat below a fig tree.\n\n"
               "I picked one.")
 
     def eat_fig(self):
+        """First fig eating function"""
         print(
-            f"I tried it, it was {self.taste}. I saw myself {self.experience}.")
+            f"I tried it, it was {self.taste}. I saw myself {self.experience}.\n")
 
 
 class NextFig(Base):
+
     def __init__(self, taste, experience, colour, feeling):
+        """Adds two more attributes: colour and feeling"""
         super().__init__(taste, experience)
         self.colour = colour
         self.feeling = feeling
 
     def eat_another(self):
-        print(f"\nI picked another one. It was {self.colour}.")
+        print(f"I picked another one. It was {self.colour}.")
         self.eat_fig()
         print(f"I felt {self.feeling}.\n")
 
 
 class FinalFig(NextFig):
+    """Final fig realisation"""
+
     def __init__(self, taste, experience, colour, feeling, consequence):
         super().__init__(taste, experience, colour, feeling)
         self.consequence = consequence
 
     def eat_another(self):
-        print(f"I picked a final fig. It was {self.colour}.\n"
-              f"It tasted {self.taste}. I saw myself {self.experience}.\n"
-              f"I realised {self.consequence}")
+        print(f"I picked a final fig. It was {self.colour}.")
+        super().eat_fig()
+        print(f"I realised {self.consequence}")
 
 
 if __name__ == "__main__":
