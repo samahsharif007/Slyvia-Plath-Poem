@@ -8,8 +8,7 @@ class Base:
 
     def begin(self):
         print("I'm 23 and I'm hungry.\n"
-              "I could starve, but I'm sat below a fig tree.\n"
-              "I should eat some before they rot.\n\n"
+              "I could starve, but I'm sat below a fig tree.\n\n"
               "I picked one.")
 
     def eat_fig(self):
@@ -36,23 +35,26 @@ class FinalFig(NextFig):
 
     def eat_another(self):
         print(f"I picked a final fig. It was {self.colour}.\n"
-              f"It tasted {self.taste}.\n"
+              f"It tasted {self.taste}. I saw myself {self.experience}.\n"
               f"I realised {self.consequence}")
 
 
 if __name__ == "__main__":
     f1 = Base("sweet", "reading endless books")
     f1.begin()
+    f1.eat_fig()
 
     possibiliites = [
-        NextFig("sweet", "dancing with my closest friends", "purple", "alive"),
-        NextFig("honeyed", "living by the sea", "golden", "free")
+        NextFig("plump", "dancing with my closest friends",
+                "deep purple", "alive"),
+        NextFig("honeyed", "living by the sea", "golden", "free"),
+        NextFig("rich", "painting in a garden", "tender", "hopeful")
     ]
 
     for fig in possibiliites:
         fig.eat_another()
 
     final_fig = FinalFig("rotten", "doing nothing", "brown",
-                         "empty", "I don't like rotten fruit.")
+                         "empty", "I don't like rotten fruit, nor do I have to eat any.")
 
     final_fig.eat_another()
