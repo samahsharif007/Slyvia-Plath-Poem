@@ -1,4 +1,4 @@
-I'm practicing using classes and methods in the shape of a poem.
+I'm practicing using OOD in the shape of a poem.
 
 This is an offensive rendition of Sylvia Plath's Fig Tree in The Bell Jar, so I'm sorry in advance.
 
